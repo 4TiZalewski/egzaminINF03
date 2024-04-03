@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacja paliw</title>
+    <link rel="stylesheet" href="styl3.css">
+</head>
+<body>
+    <header>
+        <section class="baner-lewy">
+            <h1>Stacja Paliw</h1>
+        </section>
+        <section class="baner-prawy">
+            <a href="stacja.html"><img src="home.png" alt=""></a>
+            <a href="obliczenia.html"><img src="znak.png" alt=""></a>
+        </section>
+    </header>
+    <main class="blok-glowny">
+        <h3>Oblicz koszt paliwa</h3>
+        <label for="fuel-type">
+            Rodzaj paliwa (1-benzyna, 2-olej napędowy): 
+            <input type="number" min="1" max="2" name="fuel-type" id="fuel-type">
+        </label>
+        <label for="fuel-quantity">
+            Ile litrów
+            <input type="number" min="1" name="fuel-quantity" id="fuel-quantity">
+        </label>
+        <input type="submit" value="OBLICZ" id="oblicz-btn">
+        <div id="display"></div>
+    </main>
+    <aside>
+        <section class="blok-lewy">
+            <a href="kwerendy.txt">Pobierz kwerendy</a>
+        </section>
+        <section class="blok-prawy">
+            <img src="samochod.png" alt="samochód">
+        </section>
+    </aside>
+    <footer class="stopka">
+        <p>Stronę opracował: 00000000000</p>
+    </footer>
+    <script>
+        const oblicz_btn = document.querySelector("#oblicz-btn");
+        if (oblicz_btn) {
+            oblicz_btn.addEventListener("click", (event) => {
+                event.preventDefault();
+
+                const fuel_type = document.querySelector("#fuel-type");
+                const fuel_quantity = document.querySelector("#fuel-quantity");
+
+                let cost = 0;
+                switch (fuel_type.value) {
+                    case "1":
+                        cost = 4 * Number(fuel_quantity.value);
+                        break;
+                    case "2":
+                        cost = 3.5 * Number(fuel_quantity.value);
+                        break;
+                }
+
+                const display = document.querySelector("#display");
+                display.innerText = `koszt paliwa: ${cost}zł`;
+            });
+        }
+    </script>
+</body>
+</html>
