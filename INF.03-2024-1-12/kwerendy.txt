@@ -1,0 +1,19 @@
+/* Kwerenda 1 */
+SELECT kadra.imie, kadra.nazwisko, kadra.stanowisko
+FROM kadra
+WHERE kadra.stanowisko = "fryzjer" OR kadra.stanowisko = "stylista";
+
+/* Kwerenda 2 */
+SELECT COUNT(*) AS liczba_uslug_fryzjerskich, MAX(uslugi.cena) AS najwyzsza_cena_uslug_fryzjerskich 
+FROM uslugi
+JOIN kadra ON uslugi.kadra_id = kadra.id
+WHERE kadra.stanowisko = "fryzjer";
+
+/* Kwerenda 3 */
+SELECT uslugi.nazwa, kadra.imie
+FROM uslugi
+JOIN kadra ON kadra.id = uslugi.kadra_id;
+
+/* Kwerenda 4 */
+ALTER TABLE uslugi
+ADD COLUMN (opinia TEXT);

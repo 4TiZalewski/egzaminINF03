@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+    font-family: Cambria;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 150px 250px 330px min-content;
+    grid-template-areas: "oferta header"
+                         "oferta main"
+                         "personel main"
+                         "footer footer";
+}
+
+aside, .container > figure {
+    background-color: #E1BEE7;
+}
+
+aside {
+    grid-area: oferta;
+    height: 400px;
+}
+
+.container > figure {
+    grid-area: personel;
+    height: 330px;
+    margin: 0;
+}
+
+header, main {
+    font-size: 170%;
+    text-align: center;
+}
+
+header {
+    grid-area: header;
+    background-color: #9C64A6;
+    color: white;
+    height: 150px;
+    letter-spacing: 5px;
+}
+
+main {
+    grid-area: main;
+    color: indigo;
+    height: 580px;
+}
+
+
+footer {
+    grid-area: footer;
+    background-color: #9C64A6;
+    color: white;
+    padding: 10px;
+}
+
+h2 {
+    text-align: center;
+}
+
+ul {
+    list-style: circle;
+}
+
+img {
+    padding: 4px;
+    margin: 15px;
+}
+
+img:hover {
+    padding: 3px;
+    border: 1px dashed indigo;
+}
+
+#main-menu {
+    padding: 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
