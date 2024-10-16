@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konfigurator wyposażenia</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="./baner.jpg" alt="baner">
+        </header>
+        <aside>
+            <form>
+                <hr>
+                <h2>Kolor</h2>
+                <select name="color" id="color" onchange="changeColor()">
+                    <option value="szary" selected>szary</option>
+                    <option value="niebieski">niebieski</option>
+                    <option value="czerwony">czerwony</option>
+                    <option value="zolty">żółty</option>
+                    <option value="zielony">zielony</option>
+                </select>
+                <hr>
+                <h2>Felgi</h2>
+                <label for="stalowe">
+                    Stalowe
+                    <input type="radio" name="felgi" value="stalowe" id="stalowe" checked onchange="changePrice()">
+                </label>
+                <label for="aluminiowe">
+                    Aluminiowe
+                    <input type="radio" name="felgi" value="aluminiowe" id="aluminiowe" onchange="changePrice()">
+                </label>
+                <hr>
+                <h2>Doposażenie</h2>
+                <label for="czujniki-parkowania">
+                    Czujniki Parkowania
+                    <input type="checkbox" name="czujniki-parkowania" id="czujniki-parkowania" onchange="changePrice()">
+                </label>
+                <label for="climatronic">
+                    Climatronic
+                    <input type="checkbox" name="climatronic" id="climatronic" onchange="changePrice()">
+                </label>
+                <label for="nawigacja">
+                    Nawigacja
+                    <input type="checkbox" name="nawigacja" id="nawigacja" onchange="changePrice()">
+                </label>
+                <hr>
+            </form>
+        </aside>
+        <main>
+            <h1>Twój samochód</h1>
+            <img src="./szary.png" alt="foto" class="car">
+            <h1>Wycena</h1>
+            <p class="wycena">Cena bazowa: 75000 zł</p>
+        </main>
+        <footer>
+            <p>Autor strony: <i>00000000000</i></p>
+        </footer>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Verdana;
+    background-color: #7D7F85;
+}
+
+.container {
+    background-color: #C2C3C2;
+    width: 800px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-areas: "header header"
+                         "aside  main  "
+                         "footer footer";
+}
+
+header {
+    height: 200px;
+    /* width: 100%; */ /* width jest zdefiniowany w .container > grid-template-columns */
+    grid-area: header;
+}
+
+aside {
+    background-color: #F8C013;
+    text-align: center;
+    height: 600px;
+    /* width: 30%; */ /* width jest zdefiniowany w .container > grid-template-columns */
+    grid-area: aside;
+}
+
+main {
+    background-color: #C2C3C2;
+    text-align: center;
+    color: #886829;
+    height: 560px;
+    /* width: 70%; */ /* width jest zdefiniowany w .container > grid-template-columns */
+    padding-top: 40px;
+    grid-area: main;
+}
+
+footer {
+    background-color: #1A3B98;
+    text-align: center;
+    color: white;
+    /* width: 100%; */ /* width jest zdefiniowany w .container > grid-template-columns */
+    grid-area: footer;
+}
+
+.car {
+    width: 75%;
+    margin: auto;
+}
+
+.wycena {
+    margin-top: 30px;
+    margin-right: 50px;
+    text-align: right;
+    font-size: small;
+}
+
+body {
+    margin: 0;
+}
+
+aside label {
+    display: block;
+}
