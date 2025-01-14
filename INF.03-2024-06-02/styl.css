@@ -1,0 +1,114 @@
+* {
+  font-family: Garamond;
+}
+
+.baner {
+  background-color: Tomato;
+  color: white;
+  text-align: center;
+  /* width: 80%; */ /* Szerokość podana w grid-zie: linia 102 i aplikowana w linii 93 */
+  height: 80px;
+}
+
+.chat {
+  border: 1px solid Tomato;
+  margin: 15px;
+  height: 470px;
+  overflow: scroll;
+}
+
+.glowny {
+  /* width: 80%; */ /* Szerokość podana w grid-zie: linia 102 i aplikowana w linii 93 */
+  height: 600px;
+}
+
+.boczny {
+  background-color: Coral;
+  /* width: 20%; */ /* Szerokość podana w grid-zie: linia 102 i aplikowana w linii 97 */
+  height: 680px;
+}
+
+.stopka {
+  background-color: Tomato;
+  color: white;
+  text-align: center;
+}
+
+img {
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.wypowiedz {
+  border-radius: 5px;
+  width: 90%;
+  height: 70px;
+  margin: 2%;
+  padding: 3px;
+}
+
+.jolanta {
+  background-color: #eee;
+}
+
+.jolanta > figure {
+  float: left;
+}
+
+.krzysztof {
+  background-color: #ccc;
+  text-align: right;
+}
+
+.krzysztof > figure {
+  float: right;
+}
+
+button {
+  background-color: Tomato;
+  border: solid 1px darkred;
+  padding: 5px;
+  font-weight: bold;
+}
+
+input[type="text"] {
+  width: 500px;
+}
+
+body {
+  margin: 0;
+}
+
+.baner {
+  display: flex;
+  justify-content: center;
+}
+
+figure {
+  margin: 0;
+}
+
+.lewy {
+  grid-area: lewy;
+}
+
+.boczny {
+  grid-area: boczny;
+}
+
+.container > section {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-rows: 1fr;
+  grid-template-areas: "lewy boczny";
+}
+
+.lewy {
+  display: flex;
+  flex-direction: column;
+}
+
+.stopka > h5 {
+  margin: 0;
+}

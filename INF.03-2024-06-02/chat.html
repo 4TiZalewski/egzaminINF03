@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chat</title>
+    <link href="styl.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <section>
+        <section class="lewy">
+          <header class="baner">
+            <h2>Chat</h2>
+          </header>
+          <main class="glowny">
+            <section class="chat">
+              <section class="wypowiedz jolanta">
+                <figure>
+                  <img src="./pliki2/Jolka.jpg" alt="Jolanta Nowak" />
+                </figure>
+                <p>Cześć idziesz jutro do kina?</p>
+              </section>
+              <section class="wypowiedz krzysztof">
+                <figure>
+                  <img src="./pliki2/Krzysiek.jpg" alt="Krzysztof Łukasiński" />
+                </figure>
+                <p>Tak! A ty?</p>
+              </section>
+            </section>
+            <section>
+              <div>
+                <label for="wiadomosc">
+                  Wpisz wiadomość:
+                  <input type="text" name="wiadomosc" id="wiadomosc" />
+                </label>
+                <button onclick="wyslij()">Wyślij</button>
+              </div>
+              <button onclick="losowaOdpowiedz()">
+                Generuj losową odpowiedź
+              </button>
+            </section>
+          </main>
+        </section>
+        <aside class="boczny">
+          <h3>Chaty</h3>
+          <ul>
+            <li>Ogólny</li>
+            <li>
+              Tematycznie
+              <ol>
+                <li>Turystyczny</li>
+                <li>Żeglarski</li>
+                <li>Filatelistyczny</li>
+                <li>Hodowla zwierzątek domowych</li>
+              </ol>
+            </li>
+          </ul>
+          <h3>Uczestnicy</h3>
+          <p>Jolanta Nowak</p>
+          <figure>
+            <img src="./pliki2/Jolka.jpg" alt="Jolanta Nowak" />
+          </figure>
+          <p>Krzysztof Łukasiński</p>
+          <figure>
+            <img src="./pliki2/Krzysiek.jpg" alt="Krzysztof Łukasiński" />
+          </figure>
+        </aside>
+      </section>
+      <footer class="stopka">
+        <h5>Chat wykonał: 00000000000</h5>
+      </footer>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
